@@ -1,0 +1,2187 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <!-- <link rel="stylesheet" href="./style.css"> -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+
+  <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1rem;
+  font-family: "Times New Roman";
+  color: #002060;
+}
+
+input,
+textarea,
+select,
+button {
+  outline: none;
+}
+
+input {
+  box-shadow: none !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin-bottom: 1rem;
+  line-height: 1.8;
+}
+
+ul {
+  list-style: none;
+}
+ul.list-style-disc {
+  list-style: disc;
+}
+ul.list-style-none {
+  list-style: none;
+  padding-left: 0 !important;
+}
+
+.text-lh-1 p {
+  margin-bottom: 4px;
+  line-height: 1.2;
+}
+
+.round {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: #002060;
+  border-radius: 50%;
+  margin-right: 9px;
+  float: left;
+  margin-top: 7px;
+}
+
+h6,
+.h6,
+h5,
+.h5,
+h4,
+.h4,
+h3,
+.h3,
+h2,
+.h2,
+h1,
+.h1 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+h1,
+.h1 {
+  font-size: 2.5rem;
+}
+
+h2,
+.h2 {
+  font-size: 2rem;
+}
+
+h3,
+.h3 {
+  font-size: 1.75rem;
+}
+
+h4,
+.h4 {
+  font-size: 1.5rem;
+}
+
+h5,
+.h5 {
+  font-size: 1.25rem;
+}
+
+h6,
+.h6 {
+  font-size: 1rem;
+}
+
+.display-1 {
+  font-size: 5rem;
+}
+
+.display-2 {
+  font-size: 4.5rem;
+}
+
+.display-3 {
+  font-size: 4rem;
+}
+
+.display-4 {
+  font-size: 3.5rem;
+}
+
+.display-5 {
+  font-size: 3rem;
+}
+
+.display-6 {
+  font-size: 2.5rem;
+}
+
+.text-dark table th, .text-dark table td {
+  color: #000000;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 1rem;
+}
+table.align-top th, table.align-top td {
+  vertical-align: top;
+}
+
+.table.table-primary-darkest td {
+  border-color: #002060;
+}
+
+.table {
+  width: 100%;
+  color: #002060;
+}
+.table ul {
+  padding-left: 7px;
+}
+.table p {
+  margin-bottom: 0;
+}
+.table th {
+  padding: 0.4rem;
+  vertical-align: middle;
+  border-width: 0.8px;
+  border-color: #000000;
+  border-style: solid;
+  height: 1.6rem;
+}
+.table td {
+  padding: 0.5rem 0.5rem;
+  vertical-align: middle;
+  border-width: 0.8px;
+  border-color: #000000;
+  border-style: solid;
+  height: 1.6rem;
+}
+.table.table-dotted th {
+  border-style: dotted;
+}
+.table.table-dotted td {
+  border-style: dotted;
+}
+.table.table-dashed th {
+  border-style: dashed;
+}
+.table.table-dashed td {
+  border-style: dashed;
+}
+.table.table-xs th {
+  padding: 0.2rem 0.5rem;
+}
+.table.table-xs td {
+  padding: 0.2rem 0.5rem;
+}
+.table.table-sm th {
+  padding: 0.4rem 0.5rem;
+}
+.table.table-sm td {
+  padding: 0.4rem 0.5rem;
+}
+.table.table-md th {
+  padding: 0.8rem 0.5rem;
+}
+.table.table-md td {
+  padding: 0.8rem 0.5rem;
+}
+.table.table-lg th {
+  padding: 1rem 0.5rem;
+}
+.table.table-lg td {
+  padding: 1rem 0.5rem;
+}
+
+.table-borderless tbody + tbody,
+.table-borderless td,
+.table-borderless th,
+.table-borderless thead th {
+  border: 0;
+}
+
+.table .table-dark th {
+  color: #fff;
+  background-color: #343a40;
+  border-color: #454d55;
+}
+
+.table .table-light th {
+  color: #495057;
+  background-color: #e9ecef;
+  border-color: #dee2e6;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.img-thumbnail {
+  padding: 0.25rem;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  max-width: 100%;
+  height: auto;
+}
+
+.container,
+.container-fluid,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container,
+.container-sm {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container,
+.container-sm,
+.container-md {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container,
+.container-sm,
+.container-md,
+.container-lg {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl {
+    max-width: 1140px;
+  }
+}
+.row {
+  overflow: hidden;
+}
+
+.col {
+  width: auto;
+  float: left;
+}
+
+.col-1 {
+  width: 8.33333%;
+  float: left;
+}
+
+.col-2 {
+  width: 16.66667%;
+  float: left;
+}
+
+.col-3 {
+  width: 25%;
+  float: left;
+}
+
+.col-4 {
+  width: 33.33333%;
+  float: left;
+}
+
+.col-5 {
+  width: 41.66667%;
+  float: left;
+}
+
+.col-6 {
+  width: 50%;
+  float: left;
+}
+
+.col-7 {
+  width: 58.33333%;
+  float: left;
+}
+
+.col-8 {
+  width: 66.66667%;
+  float: left;
+}
+
+.col-9 {
+  width: 75%;
+  float: left;
+}
+
+.col-10 {
+  width: 83.33333%;
+  float: left;
+}
+
+.col-11 {
+  width: 91.66667%;
+  float: left;
+}
+
+.col-12 {
+  width: 100%;
+  float: left;
+}
+
+.form-control {
+  border-bottom: 0.8px solid #000;
+  display: inline-block;
+}
+.form-control.form-dotted {
+  border-bottom: 0.8px dotted #000;
+}
+.form-control.border-dotted {
+  border: none;
+  border-bottom: 0.8px dotted #000;
+}
+.form-control.border-dashed {
+  border: none;
+  border-bottom: 0.8px dashed #000;
+}
+
+hr.orange-line {
+  background-color: #ef9809;
+  height: 5px;
+  border: 0px solid white;
+}
+hr.primary-darkest-line {
+  background-color: #002060;
+  height: 1px;
+  border: 0px solid white;
+}
+
+.align-baseline {
+  vertical-align: baseline !important;
+}
+
+.align-top {
+  vertical-align: top !important;
+}
+
+.align-middle {
+  vertical-align: middle !important;
+}
+
+.align-bottom {
+  vertical-align: bottom !important;
+}
+
+.align-text-bottom {
+  vertical-align: text-bottom !important;
+}
+
+.align-text-top {
+  vertical-align: text-top !important;
+}
+
+.float-left {
+  float: left !important;
+}
+
+.float-right {
+  float: right !important;
+}
+
+.float-none {
+  float: none !important;
+}
+
+.overflow-auto {
+  overflow: auto !important;
+}
+
+.overflow-hidden {
+  overflow: hidden !important;
+}
+
+.overflow-visible {
+  overflow: visible !important;
+}
+
+.overflow-scroll {
+  overflow: scroll !important;
+}
+
+.d-inline {
+  display: inline !important;
+}
+
+.d-inline-block {
+  display: inline-block !important;
+}
+
+.d-block {
+  display: block !important;
+}
+
+.d-grid {
+  display: grid !important;
+}
+
+.d-table {
+  display: table !important;
+}
+
+.d-table-row {
+  display: table-row !important;
+}
+
+.d-table-cell {
+  display: table-cell !important;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.d-inline-flex {
+  display: inline-flex !important;
+}
+
+.d-none {
+  display: none !important;
+}
+
+.shadow {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.shadow-sm {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+}
+
+.shadow-lg {
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+}
+
+.shadow-none {
+  box-shadow: none !important;
+}
+
+.position-static {
+  position: static !important;
+}
+
+.position-relative {
+  position: relative !important;
+}
+
+.position-absolute {
+  position: absolute !important;
+}
+
+.position-fixed {
+  position: fixed !important;
+}
+
+.position-sticky {
+  position: sticky !important;
+}
+
+.top-0 {
+  top: 0 !important;
+}
+
+.top-50 {
+  top: 50% !important;
+}
+
+.top-100 {
+  top: 100% !important;
+}
+
+.bottom-0 {
+  bottom: 0 !important;
+}
+
+.bottom-50 {
+  bottom: 50% !important;
+}
+
+.bottom-100 {
+  bottom: 100% !important;
+}
+
+.start-0 {
+  left: 0 !important;
+}
+
+.start-50 {
+  left: 50% !important;
+}
+
+.start-100 {
+  left: 100% !important;
+}
+
+.end-0 {
+  right: 0 !important;
+}
+
+.end-50 {
+  right: 50% !important;
+}
+
+.end-100 {
+  right: 100% !important;
+}
+
+.translate-middle {
+  transform: translate(-50%, -50%) !important;
+}
+
+.translate-middle-x {
+  transform: translateX(-50%) !important;
+}
+
+.translate-middle-y {
+  transform: translateY(-50%) !important;
+}
+
+.border {
+  border: 0.8px solid #000000 !important;
+}
+
+.border-0 {
+  border: 0 !important;
+}
+
+.border-top {
+  border-top: 0.8px solid #000000 !important;
+}
+
+.border-top-0 {
+  border-top: 0 !important;
+}
+
+.border-right {
+  border-right: 0.8px solid #000000 !important;
+}
+
+.border-right-0 {
+  border-right: 0 !important;
+}
+
+.border-bottom {
+  border-bottom: 0.8px solid #000000 !important;
+}
+
+.border-bottom-0 {
+  border-bottom: 0 !important;
+}
+
+.border-left {
+  border-left: 0.8px solid #000000 !important;
+}
+
+.border-left-0 {
+  border-left: 0 !important;
+}
+
+.border-primary {
+  border-color: #4472c4 !important;
+}
+
+.border-primary-dark {
+  border-color: #406cbb !important;
+}
+
+.border-primary-darkest {
+  border-color: #002060 !important;
+}
+
+.border-primary-light {
+  border-color: #4472c4 !important;
+}
+
+.border-primary-lightest {
+  border-color: #00b0f0 !important;
+}
+
+.border-primary-darkest {
+  border-color: #002060 !important;
+}
+
+.border-secondary {
+  border-color: #70ad47 !important;
+}
+
+.border-success {
+  border-color: #70ad47 !important;
+}
+
+.border-info {
+  border-color: #0dcaf0 !important;
+}
+
+.border-warning {
+  border-color: #ef9809 !important;
+}
+
+.border-warning-dark {
+  border-color: #fe9700 !important;
+}
+
+.border-warning-darkest {
+  border-color: #ed7d31 !important;
+}
+
+.border-danger {
+  border-color: #ff0e0e !important;
+}
+
+.border-light {
+  border-color: #f8f9fa !important;
+}
+
+.border-dark {
+  border-color: #212529 !important;
+}
+
+.border-white {
+  border-color: #ffffff !important;
+}
+
+.border-black {
+  border-color: #000000 !important;
+}
+
+.border-1 {
+  border-width: 1px !important;
+}
+.border-1 .form-control {
+  border-width: 1px !important;
+}
+
+.border-2 {
+  border-width: 2px !important;
+}
+
+.border-3 {
+  border-width: 3px !important;
+}
+
+.border-4 {
+  border-width: 4px !important;
+}
+
+.border-5 {
+  border-width: 5px !important;
+}
+
+.rounded {
+  border-radius: 0.25rem !important;
+}
+
+.rounded-0 {
+  border-radius: 0 !important;
+}
+
+.rounded-1 {
+  border-radius: 0.2rem !important;
+}
+
+.rounded-2 {
+  border-radius: 0.25rem !important;
+}
+
+.rounded-3 {
+  border-radius: 0.3rem !important;
+}
+
+.rounded-4 {
+  border-radius: 0.4rem !important;
+}
+
+.rounded-13 {
+  border-radius: 1.3rem !important;
+}
+
+.rounded-23 {
+  border-radius: 2.3rem !important;
+}
+
+.rounded-md {
+  border-radius: 2rem !important;
+}
+
+.rounded-circle {
+  border-radius: 50% !important;
+}
+
+.rounded-pill {
+  border-radius: 50rem !important;
+}
+
+.rounded-top {
+  border-top-left-radius: 0.25rem !important;
+  border-top-right-radius: 0.25rem !important;
+}
+
+.rounded-end {
+  border-top-right-radius: 0.25rem !important;
+  border-bottom-right-radius: 0.25rem !important;
+}
+
+.rounded-bottom {
+  border-bottom-right-radius: 0.25rem !important;
+  border-bottom-left-radius: 0.25rem !important;
+}
+
+.rounded-start {
+  border-bottom-left-radius: 0.25rem !important;
+  border-top-left-radius: 0.25rem !important;
+}
+
+.rounded-0 {
+  border-radius: 0rem !important;
+}
+
+.rounded-1 {
+  border-radius: 0.1rem !important;
+}
+
+.rounded-2 {
+  border-radius: 0.2rem !important;
+}
+
+.rounded-3 {
+  border-radius: 0.3rem !important;
+}
+
+.transform {
+  transform: rotate(-90deg) translateX(-27rem) translateY(0rem);
+  width: 86rem;
+}
+
+.transform table {
+  font-size: 0.8rem;
+}
+
+.transform table th,
+.transform table th {
+  padding: 0 5px;
+}
+
+.circle-sm {
+  border: 2px solid black;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+}
+.circle-lg {
+  border: 2px solid black;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+}
+
+.border.border-dotted {
+  border-style: dotted !important;
+}
+.border.border-dotted.border-3 {
+  border-width: 3.2px !important;
+}
+
+.w-2 {
+  width: 2% !important;
+}
+
+.w-4 {
+  width: 4% !important;
+}
+
+.w-5 {
+  width: 5% !important;
+}
+
+.w-6 {
+  width: 6% !important;
+}
+
+.w-7 {
+  width: 7% !important;
+}
+
+.w-8 {
+  width: 8% !important;
+}
+
+.w-10 {
+  width: 10% !important;
+}
+
+.w-12 {
+  width: 12% !important;
+}
+
+.w-14 {
+  width: 14% !important;
+}
+
+.w-15 {
+  width: 15% !important;
+}
+
+.w-16 {
+  width: 16% !important;
+}
+
+.w-18 {
+  width: 18% !important;
+}
+
+.w-15 {
+  width: 15% !important;
+}
+
+.w-17 {
+  width: 17% !important;
+}
+
+.w-20 {
+  width: 20% !important;
+}
+
+.w-25 {
+  width: 25% !important;
+}
+
+.w-30 {
+  width: 30% !important;
+}
+
+.w-33-33 {
+  width: 33.33333%;
+}
+
+.w-33 {
+  width: 33% !important;
+}
+
+.w-35 {
+  width: 35% !important;
+}
+
+.w-30 {
+  width: 30% !important;
+}
+
+.w-40 {
+  width: 40% !important;
+}
+
+.w-50 {
+  width: 50% !important;
+}
+
+.w-55 {
+  width: 55% !important;
+}
+
+.w-57 {
+  width: 57% !important;
+}
+
+.w-58 {
+  width: 58.3% !important;
+}
+
+.w-60 {
+  width: 60% !important;
+}
+
+.w-65 {
+  width: 65% !important;
+}
+
+.w-70 {
+  width: 70% !important;
+}
+
+.w-75 {
+  width: 75% !important;
+}
+
+.w-80 {
+  width: 80% !important;
+}
+
+.w-85 {
+  width: 85% !important;
+}
+
+.w-90 {
+  width: 90% !important;
+}
+
+.w-95 {
+  width: 90% !important;
+}
+
+.w-100 {
+  width: 100% !important;
+}
+
+.w-auto {
+  width: auto !important;
+}
+
+.mw-100 {
+  max-width: 100% !important;
+}
+
+.min-w-4 {
+  min-width: 4% !important;
+}
+
+.min-w-5 {
+  min-width: 5% !important;
+}
+
+.min-w-6 {
+  min-width: 6% !important;
+}
+
+.min-w-10 {
+  min-width: 10% !important;
+}
+
+.min-w-14 {
+  min-width: 14% !important;
+}
+
+.min-w-15 {
+  min-width: 15% !important;
+}
+
+.min-w-16 {
+  min-width: 16% !important;
+}
+
+.min-w-20 {
+  min-width: 20% !important;
+}
+
+.min-w-25 {
+  min-width: 25% !important;
+}
+
+.min-w-30 {
+  min-width: 30% !important;
+}
+
+.min-w-50 {
+  min-width: 50% !important;
+}
+
+.min-w-75 {
+  min-width: 75% !important;
+}
+
+.min-w-100 {
+  min-width: 100% !important;
+}
+
+.h-1 {
+  height: 1rem !important;
+}
+
+.h-2 {
+  height: 2rem !important;
+}
+
+.h-3 {
+  height: 3rem !important;
+}
+
+.h-4 {
+  height: 4rem !important;
+}
+
+.h-5 {
+  height: 5rem !important;
+}
+
+.h-6 {
+  height: 6rem !important;
+}
+
+.h-7 {
+  height: 7rem !important;
+}
+
+.h-8 {
+  height: 8rem !important;
+}
+
+.h-9 {
+  height: 9rem !important;
+}
+
+.h-10 {
+  height: 10rem !important;
+}
+
+.h-15 {
+  height: 25rem !important;
+}
+
+.h-25 {
+  height: 15rem !important;
+}
+
+.h-auto {
+  height: auto !important;
+}
+
+.min-h-25 {
+  min-height: 25% !important;
+}
+
+.min-h-50 {
+  min-height: 50% !important;
+}
+
+.min-h-75 {
+  min-height: 75% !important;
+}
+
+.min-h-100 {
+  min-height: 100% !important;
+}
+
+.m-0 {
+  margin: 0 !important;
+}
+
+.m-1 {
+  margin: 0.25rem !important;
+}
+
+.m-2 {
+  margin: 0.5rem !important;
+}
+
+.m-3 {
+  margin: 1rem !important;
+}
+
+.m-4 {
+  margin: 1.5rem !important;
+}
+
+.m-5 {
+  margin: 3rem !important;
+}
+
+.m-auto {
+  margin: auto !important;
+}
+
+.mx-0 {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+
+.mx-1 {
+  margin-right: 0.25rem !important;
+  margin-left: 0.25rem !important;
+}
+
+.mx-2 {
+  margin-right: 0.5rem !important;
+  margin-left: 0.5rem !important;
+}
+
+.mx-3 {
+  margin-right: 1rem !important;
+  margin-left: 1rem !important;
+}
+
+.mx-4 {
+  margin-right: 1.5rem !important;
+  margin-left: 1.5rem !important;
+}
+
+.mx-5 {
+  margin-right: 3rem !important;
+  margin-left: 3rem !important;
+}
+
+.mx-auto {
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+.my-0 {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.my-1 {
+  margin-top: 0.25rem !important;
+  margin-bottom: 0.25rem !important;
+}
+
+.my-2 {
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.my-3 {
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.my-4 {
+  margin-top: 1.5rem !important;
+  margin-bottom: 1.5rem !important;
+}
+
+.my-5 {
+  margin-top: 3rem !important;
+  margin-bottom: 3rem !important;
+}
+
+.my-auto {
+  margin-top: auto !important;
+  margin-bottom: auto !important;
+}
+
+.mt-0 {
+  margin-top: 0 !important;
+}
+
+.mt-1 {
+  margin-top: 0.25rem !important;
+}
+
+.mt-2 {
+  margin-top: 0.5rem !important;
+}
+
+.mt-3 {
+  margin-top: 1rem !important;
+}
+
+.mt-4 {
+  margin-top: 1.5rem !important;
+}
+
+.mt-5 {
+  margin-top: 3rem !important;
+}
+
+.mt-8 {
+  margin-top: 4.5rem !important;
+}
+
+.mt-10 {
+  margin-top: 5.5rem !important;
+}
+
+.mt-15 {
+  margin-top: 8rem !important;
+}
+
+.mt-auto {
+  margin-top: auto !important;
+}
+
+.mr-0 {
+  margin-right: 0 !important;
+}
+
+.mr-1 {
+  margin-right: 0.25rem !important;
+}
+
+.mr-2 {
+  margin-right: 0.5rem !important;
+}
+
+.mr-3 {
+  margin-right: 1rem !important;
+}
+
+.mr-4 {
+  margin-right: 1.5rem !important;
+}
+
+.mr-5 {
+  margin-right: 3rem !important;
+}
+
+.mr-auto {
+  margin-right: auto !important;
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
+.mb-1 {
+  margin-bottom: 0.25rem !important;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem !important;
+}
+
+.mb-3 {
+  margin-bottom: 1rem !important;
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem !important;
+}
+
+.mb-5 {
+  margin-bottom: 3rem !important;
+}
+
+.mb-auto {
+  margin-bottom: auto !important;
+}
+
+.ml-0 {
+  margin-left: 0 !important;
+}
+
+.ml-1 {
+  margin-left: 0.25rem !important;
+}
+
+.ml-2 {
+  margin-left: 0.5rem !important;
+}
+
+.ml-3 {
+  margin-left: 1rem !important;
+}
+
+.ml-4 {
+  margin-left: 1.5rem !important;
+}
+
+.ml-5 {
+  margin-left: 3rem !important;
+}
+
+.ml-10 {
+  margin-left: 5.5rem !important;
+}
+
+.ml-auto {
+  margin-left: auto !important;
+}
+
+.p-0 {
+  padding: 0 !important;
+}
+
+.p-1 {
+  padding: 0.25rem !important;
+}
+
+.p-2 {
+  padding: 0.5rem !important;
+}
+
+.p-3 {
+  padding: 1rem !important;
+}
+
+.p-4 {
+  padding: 1.5rem !important;
+}
+
+.p-5 {
+  padding: 3rem !important;
+}
+
+.px-0 {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+.px-1 {
+  padding-right: 0.25rem !important;
+  padding-left: 0.25rem !important;
+}
+
+.px-2 {
+  padding-right: 0.5rem !important;
+  padding-left: 0.5rem !important;
+}
+
+.px-3 {
+  padding-right: 1rem !important;
+  padding-left: 1rem !important;
+}
+
+.px-4 {
+  padding-right: 1.5rem !important;
+  padding-left: 1.5rem !important;
+}
+
+.px-5 {
+  padding-right: 3rem !important;
+  padding-left: 3rem !important;
+}
+
+.py-0 {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.py-1 {
+  padding-top: 0.25rem !important;
+  padding-bottom: 0.25rem !important;
+}
+
+.py-2 {
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+}
+
+.py-3 {
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+}
+
+.py-4 {
+  padding-top: 1.5rem !important;
+  padding-bottom: 1.5rem !important;
+}
+
+.py-5 {
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
+}
+
+.pt-0 {
+  padding-top: 0 !important;
+}
+
+.pt-1 {
+  padding-top: 0.25rem !important;
+}
+
+.pt-2 {
+  padding-top: 0.5rem !important;
+}
+
+.pt-3 {
+  padding-top: 1rem !important;
+}
+
+.pt-4 {
+  padding-top: 1.5rem !important;
+}
+
+.pt-5 {
+  padding-top: 3rem !important;
+}
+
+.pr-0 {
+  padding-right: 0 !important;
+}
+
+.pr-1 {
+  padding-right: 0.25rem !important;
+}
+
+.pr-2 {
+  padding-right: 0.5rem !important;
+}
+
+.pr-3 {
+  padding-right: 1rem !important;
+}
+
+.pr-4 {
+  padding-right: 1.5rem !important;
+}
+
+.pr-5 {
+  padding-right: 3rem !important;
+}
+
+.pb-0 {
+  padding-bottom: 0 !important;
+}
+
+.pb-1 {
+  padding-bottom: 0.25rem !important;
+}
+
+.pb-2 {
+  padding-bottom: 0.5rem !important;
+}
+
+.pb-3 {
+  padding-bottom: 1rem !important;
+}
+
+.pb-4 {
+  padding-bottom: 1.5rem !important;
+}
+
+.pb-5 {
+  padding-bottom: 3rem !important;
+}
+
+.pl-0 {
+  padding-left: 0 !important;
+}
+
+.pl-1 {
+  padding-left: 0.25rem !important;
+}
+
+.pl-2 {
+  padding-left: 0.5rem !important;
+}
+
+.pl-3 {
+  padding-left: 1rem !important;
+}
+
+.pl-4 {
+  padding-left: 1.5rem !important;
+}
+
+.pl-5 {
+  padding-left: 3rem !important;
+}
+
+.pl-20 {
+  padding-left: 20rem !important;
+}
+
+.ml-10 {
+  margin-left: 5.5rem;
+}
+
+.ml-15 {
+  margin-left: 8rem;
+}
+
+.pt-8 {
+  padding-top: 4.5rem;
+}
+
+.pt-10 {
+  padding-top: 5.5rem;
+}
+
+.pt-15 {
+  padding-top: 8rem;
+}
+
+.pt-18 {
+  padding-top: 9.5rem;
+}
+
+.pt-20 {
+  padding-top: 10.5rem;
+}
+
+.pt-25 {
+  padding-top: 13rem;
+}
+
+.pt-30 {
+  padding-top: 15.5rem;
+}
+
+.pt-40 {
+  padding-top: 20.5rem;
+}
+
+.pr-10 {
+  padding-right: 5.5rem;
+}
+
+.pr-15 {
+  padding-right: 8rem;
+}
+
+.pb-10 {
+  padding-bottom: 6rem;
+}
+
+.pb-15 {
+  padding-bottom: 8rem;
+}
+
+.px-6 {
+  padding-right: 3.5rem;
+  padding-left: 3.5rem;
+}
+
+.px-7 {
+  padding-right: 4rem;
+  padding-left: 4rem;
+}
+
+.px-8 {
+  padding-right: 4.5rem;
+  padding-left: 4.5rem;
+}
+
+.px-10 {
+  padding-right: 5.5rem;
+  padding-left: 5.5rem;
+}
+
+.px-15 {
+  padding-right: 8rem;
+  padding-left: 8rem;
+}
+
+.px-20 {
+  padding-right: 10.5rem;
+  padding-left: 10.5rem;
+}
+
+.fs-1 {
+  font-size: 2.5rem !important;
+}
+
+.fs-2 {
+  font-size: 2rem !important;
+}
+
+.fs-3 {
+  font-size: 1.75rem !important;
+}
+
+.fs-4 {
+  font-size: 1.5rem !important;
+}
+.fs-4 table {
+  font-size: 1.5rem !important;
+}
+
+.fs-5 {
+  font-size: 1.25rem !important;
+}
+.fs-5 table {
+  font-size: 1.25rem !important;
+}
+
+.fs-6 {
+  font-size: 1.2rem !important;
+}
+.fs-6 table {
+  font-size: 1.2rem !important;
+}
+
+.fs-7 {
+  font-size: 1rem !important;
+}
+.fs-7 table {
+  font-size: 1rem !important;
+}
+
+.fs-8 {
+  font-size: 0.8rem !important;
+}
+.fs-8 table {
+  font-size: 0.8rem !important;
+}
+
+.fst-italic {
+  font-style: italic !important;
+}
+.fst-italic th, .fst-italic td {
+  font-style: italic !important;
+}
+
+.fst-normal {
+  font-style: normal !important;
+}
+
+.fw-light {
+  font-weight: 300 !important;
+}
+
+.fw-lighter {
+  font-weight: lighter !important;
+}
+
+.fw-normal {
+  font-weight: 400 !important;
+}
+
+.fw-bold {
+  font-weight: 700 !important;
+}
+
+.fw-bolder {
+  font-weight: bolder !important;
+}
+
+.lh-1 {
+  line-height: 1 !important;
+}
+.lh-1 p {
+  line-height: 1;
+}
+
+.lh-sm {
+  line-height: 1.25 !important;
+}
+.lh-sm p {
+  line-height: 1.25;
+}
+
+.lh-base {
+  line-height: 1.5 !important;
+}
+.lh-base p {
+  line-height: 1.5;
+}
+
+.lh-lg {
+  line-height: 2 !important;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-justify {
+  text-align: justify !important;
+}
+
+.text-decoration-none {
+  text-decoration: none !important;
+}
+
+.text-decoration-underline {
+  text-decoration: underline !important;
+}
+
+.text-decoration-line-through {
+  text-decoration: line-through !important;
+}
+
+.text-lowercase {
+  text-transform: lowercase !important;
+}
+
+.text-uppercase {
+  text-transform: uppercase !important;
+}
+
+.text-capitalize {
+  text-transform: capitalize !important;
+}
+
+.text-wrap {
+  white-space: normal !important;
+}
+
+.text-nowrap {
+  white-space: nowrap !important;
+}
+
+.text-break td {
+  word-break: break-all;
+}
+
+.text-primary {
+  color: #4472c4 !important;
+}
+
+.text-primary-dark {
+  color: #406cbb !important;
+}
+.text-primary-dark td, .text-primary-dark th {
+  color: #406cbb !important;
+}
+.text-primary-dark td .form-control, .text-primary-dark th .form-control {
+  border-color: #406cbb !important;
+}
+
+.text-primary-darkest {
+  color: #002060 !important;
+}
+.text-primary-darkest td, .text-primary-darkest th {
+  color: #002060 !important;
+}
+.text-primary-darkest td .form-control, .text-primary-darkest th .form-control {
+  border-color: #002060 !important;
+}
+
+.text-primary-lightest {
+  color: #00b0f0 !important;
+}
+
+.text-secondary {
+  color: #6c757d !important;
+}
+
+.text-success {
+  color: #70ad47 !important;
+}
+
+.text-info {
+  color: #0dcaf0 !important;
+}
+
+.text-warning {
+  color: #ef9809 !important;
+}
+
+.text-warning-dark {
+  color: #fe9700 !important;
+}
+
+.text-warning-darkest {
+  color: #ed7d31 !important;
+}
+
+.text-danger {
+  color: #ff0e0e !important;
+}
+.text-danger td, .text-danger td {
+  color: #ff0e0e !important;
+}
+
+.text-light {
+  color: #f8f9fa !important;
+}
+
+.text-dark {
+  color: #000 !important;
+}
+
+.text-white {
+  color: #ffffff !important;
+}
+
+.text-black {
+  color: #000 !important;
+}
+
+.text-body {
+  color: #212529 !important;
+}
+
+.text-muted {
+  color: #6c757d !important;
+}
+
+.text-black-50 {
+  color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.text-white-50 {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.text-reset {
+  color: inherit !important;
+}
+
+.text-blue {
+  color: blue;
+}
+
+.bg-primary {
+  background-color: #0d6efd !important;
+}
+
+.bg-secondary {
+  background-color: #6c757d !important;
+}
+
+.bg-success {
+  background-color: #198754 !important;
+}
+
+.bg-info {
+  background-color: #0dcaf0 !important;
+}
+
+.bg-warning {
+  background-color: #ef9809 !important;
+}
+
+.bg-warning-dark {
+  background-color: #fe9700 !important;
+}
+
+.bg-warning-darkest {
+  background-color: #ed7d31 !important;
+}
+
+.bg-danger {
+  background-color: #dc3545 !important;
+}
+
+.bg-light {
+  background-color: #f8f9fa !important;
+}
+
+.bg-dark {
+  background-color: #212529 !important;
+}
+
+.bg-white {
+  background-color: #ffffff !important;
+}
+
+.bg-black {
+  background-color: #000 !important;
+}
+
+.bg-yellow {
+  background-color: yellow !important;
+}
+
+.bg-green {
+  background-color: green !important;
+}
+
+.bg-body {
+  background-color: #ffffff !important;
+}
+
+.bg-transparent {
+  background-color: transparent !important;
+}
+
+.BMGCN-section, .BMGDN-section {
+  color: #000000;
+}
+
+.opacity-0 {
+  opacity: 0 !important;
+}
+
+.opacity-25 {
+  opacity: 0.25 !important;
+}
+
+.opacity-50 {
+  opacity: 0.5 !important;
+}
+
+.opacity-75 {
+  opacity: 0.75 !important;
+}
+
+.opacity-100 {
+  opacity: 1 !important;
+}
+
+.bg-orange-dark {
+  background-color: #fe9700;
+}
+
+.text-body {
+  color: #000000 !important;
+}
+
+.text-orange {
+  color: #ef9809;
+}
+
+.text-red {
+  color: #ff0e0e;
+}
+
+.text-gray {
+  color: #979393;
+}
+
+.text-danger {
+  color: #ff0e0e !important;
+}
+
+.text-primary {
+  color: #4472c4 !important;
+}
+
+.text-primary-darkest {
+  color: #002060;
+}
+
+.text-primary-light {
+  color: #4472c4;
+}
+
+.border-primary {
+  border-color: #4472c4 !important;
+}
+
+.border-primary-lighter {
+  border-color: #8C8CFB;
+}
+
+.shadow {
+  box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.05) !important;
+}
+
+.ul-ico {
+  list-style-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='-1 -1 2 2'><circle r='0.5' /></svg>");
+}
+
+ul {
+  list-style: disc;
+}
+
+.hotline {
+  border: 3px #4472c4 solid;
+  padding-right: 12px;
+  padding-left: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*# sourceMappingURL=style.css.map */
+
+  </style>
+</head>
+
+<body class="container-fluid mx-0 ">
+  <!-- container border -->
+  <p class="border border-1 border-success fs-5 pb-0 mb-0 ml-3 w-15 pl-3 mt-10">Phụ lục 3</p>
+  <div class=" border-warning border border-4 mx-3 overflow-hidden ">
+    <!-- header -->
+    <header class="px-3 py-2 pb-2 border-bottom border-1 border-darkest col-12">
+      <!-- top header -->
+      <div class="">
+        <div class="col-10 border-bottom border-warning border-2 pb-1">
+            <div class="col-3 ">
+                <div class="w-70 ">
+                  <img class="w-100 " style="height:70px" src='data:image/png;base64,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'/>
+                </div>
+            </div>
+            <div class="col-9">
+              <h6 class="text-uppercase mb-1 fs-4 text-gray fw-bolder">
+                <strong class="fs-5">
+                  TỔNG CÔNG TY CỔ PHẦN BẢO HIỂM SÀI GÒN–HÀ NỘI
+                </strong>
+              </h6>
+              <p class="mb-0 lh-1 fs- text-gray">
+                 Số 86 Bà Triệu, Phường Hàng Bài, Quận Hoàn Kiếm, Hà Nội
+              </p>
+              <p class="lh-3 mb-0 fs-5 text-gray">
+                <span>Tel: 04.3793 1111 </span>
+                <span class="ml-5 mr-4">Fax: 04.3793 1155</span>
+                
+              </p>
+            </div>
+        </div>
+          
+        <div class="p-0 col-2">
+          <div class="text-center">
+              <img class="mt-4" style="width:155px"
+              src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALsAAAAtCAIAAAB5zY1jAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RDE0NzA5NTA2MEY4MTFFQzg5NUNDQjgyRkNEOUQ5OTciIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RDE0NzA5NTE2MEY4MTFFQzg5NUNDQjgyRkNEOUQ5OTciPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpEMTQ3MDk0RTYwRjgxMUVDODk1Q0NCODJGQ0Q5RDk5NyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpEMTQ3MDk0RjYwRjgxMUVDODk1Q0NCODJGQ0Q5RDk5NyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PiccaJkAAAnxSURBVHja7FxtTFNZ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' />
+          </div>
+            
+        </div>
+      </div>
+      <!-- bottom header -->
+      <div class=" w-100">
+        <div class="col-6 text-center my-2">
+          <h1 class="fw-bold text-warning-dark text-uppercase fs-4 mt-2">
+            Giấy chứng nhận bảo hiểm moto - xe máy
+          </h1>
+          <div>
+              <i class="fas fa-star text-info"></i>
+              <i class="fas fa-star text-info"></i>
+              <i class="fas fa-star text-info"></i>
+              <i class="fas fa-star text-info"></i>
+              <i class="fas fa-star text-info"></i>
+              <i class="fas fa-star text-info"></i>
+              <i class="fas fa-star text-info"></i>
+              <i class="fas fa-star text-info"></i>
+              <i class="fas fa-star text-info"></i>
+          </div>
+        </div>
+        <div class="col-6 text-left py-3 my-3 ">
+          <h3 class="fw-bold text-warning-dark ">So CGN:<span class="form-control form-dotted min-w-30 bg-orange-dark"></span></h3>
+        </div>
+      </div>
+    </header>
+    <!-- main section -->
+    <main>
+      <div class="border-1 border-darkest border-bottom col-12">
+        <!-- col 1 -->
+        <div class="col-6 ">
+          <!-- col 1 top -->
+          <div class="border-1 border-bottom border-darkest">
+            <h3 class="text-uppercase fw-bold text-center fs-6 mt-2">Thông tin chung về xe moto - xe máy</h3>
+            <div class="w-100 pr-4 pl-2">
+              <h4 class="fw-bold text-dark fs-7 mb-2 ">Chủ xe:<span class="form-control form-dotted " style="width:87%"></span></h4>
+              <h4 class="fw-bold text-dark fs-7 mb-2 ">Địa chỉ:<span class="form-control form-dotted "  style="width:87%"></span></h4>
+              <h4 class="fw-bold text-dark fs-7 mb-2 ">Số điện thoại:<span class="form-control form-dotted "  style="width:77%" ></span></h4>
+              <h4 class="fw-bold text-dark fs-7 mb-2 ">Biển kiểm sóat:<span class="form-control form-dotted "  style="width:74%" ></span></h4>
+              <h4 class="fw-bold text-dark fs-7 mb-2 ">Lọai xe:<span class="form-control form-dotted "  style="width:86%" ></span></h4>
+              <h4 class="fw-bold text-dark fs-7 mb-2 ">Nhãn hiệu xe:<span class="form-control form-dotted "  style="width:77%" ></span></h4>
+              <h4 class="fw-bold text-dark fs-7 mb-2 ">Số khung:<span class="form-control form-dotted "  style="width:83%" ></span></h4>
+              <h4 class="fw-bold text-dark fs-7 mb-2 ">Số máy:<span class="form-control form-dotted "  style="width:86%" ></span></h4>
+              <h4 class="fw-bold text-dark fs-7 mb-2 ">Email:<span class="form-control form-dotted "  style="width:88%" ></span></h4>
+            </div>
+          </div>
+          <!-- col 1 bottom -->
+          <div class="my-3">
+              <h3 class="text-uppercase fw-bold text-center fs-6">Bảo hiểm bắt buộc trách nhiệm dân sự</h3>
+              <div class="mt-2 mb-1">
+                <h5 class="fw-bold fs-6 my-0">1.<span class="ml-3">Mức TNDS đối với người thứ ba</span></h5>
+                <p class="text-dark fs-5 ml-4 my-0 ">
+                    <i class="fas fa-arrow-right"></i>
+                  Về người: 150 triệu đồng/1 người/1 vụ
+                </p>
+                <p class="text-dark fs-5 ml-4 my-0 ">
+                    <i class="fas fa-arrow-right"></i>
+                  Về tài sản: 50 triệu đồng/1 vụ
+                </p>
+              </div>
+              <div class="mb-1">
+                  <h5 class="fw-bold fs-6 my-0">2.<span class="ml-3">Thời hạn bảo hiểm</span></h5>
+                  <p class="text-dark fs-5 ml-4 my-0 mr-3">
+                    Từ<span class="form-control form-dotted min-w-10"></span> giờ, ngày <span class="form-control form-dotted min-w-10"></span>tháng <span class="form-control form-dotted min-w-10"></span>năm<span class="form-control form-dotted min-w-15"></span>
+                  </p>
+                  <p class="text-dark fs-5 ml-4 my-0 mr-3">
+                    Đến<span class="form-control form-dotted min-w-10"></span> giờ, ngày <span class="form-control form-dotted min-w-10"></span>tháng <span class="form-control form-dotted min-w-10"></span>năm<span class="form-control form-dotted min-w-14"></span>
+  
+                  </p>
+              </div>
+              <div class="mb-3 mr-3">
+                  <h5 class="fw-bold fs-6 ">3.<span class="ml-3">Phí TNDS (Có VAT)</span><span class=" form-control form-dotted " style="min-width:40%"></span>đồng</h5>
+                  
+              </div>
+          </div>
+        </div>
+        <!-- col 2 -->
+        <div class="col-6 border-left border-1 border-darkest">
+           
+            <h3 class="text-uppercase fw-bold text-center fs-6 mt-2">Bảo hiểm tự nguyện</h3>
+            <div class="pr-4 pl-2">
+              <h5 class="fw-bold fs-6 mb-0">1.<span class="ml-2">Tai nạn người ngồi trên xe</span></h5>
+              <p class="text-dark fs-7 ml-4 my-0">Số người ngồi trên xe:<span class=" form-control form-dotted " style="min-width:54%"></span>người</p>
+              <p class="text-dark fs-7 ml-4 my-0 lh-sm">Mức trách nhiệm:<span class=" form-control form-dotted " style="min-width:33%"></span>triệu đồng/1 người/1 vụ</p>
+              <p class="text-dark fs-7 ml-4 my-0">Phí bảo hiểm:<span class=" form-control form-dotted " style="min-width:69%"></span>đồng</p>
+            </div>
+            <div class="pr-4 pl-2">
+                <h5 class="fw-bold fs-6 mb-1 ">2.<span class="ml-2">Thiệt hại vật chất xe <span>(chỉ bảo hiểm cho tổn thất toàn bộ)</span></span></h5>
+                <p class="text-dark fs-7 ml-4 my-0">Giá trị xe khai báo:<span class=" form-control form-dotted " style="min-width:68%"></span></p>
+                <p class="text-dark fs-7 ml-4 my-0">Số tiền bảo hiểm theo yêu cầu:<span class=" form-control form-dotted min-w-50"></span></p>
+                <p class="text-dark fs-7 ml-4 my-0">Hiệu xe:<span class=" form-control form-dotted" style="min-width:86%"></span></p>
+                <p class="text-dark fs-7 ml-4 my-0">Năm sản xuất:<span class=" form-control form-dotted "  style="min-width:76%"></span></p>
+                <p class="text-dark fs-7 ml-4 my-0">Rủi ro được bảo hiểm:<span class=" form-control form-dotted " style="min-width:63%"></span></p>
+                <p class="text-dark fs-7 ml-4 my-0"><span class=" form-control form-dotted min-w-100"></span></p>
+                <p class="text-dark fs-7 ml-4 my-0">Mức khấu trừ:<span class=" form-control form-dotted"  style="min-width:60%"></span>đồng/1 vụ</p>
+                <p class="text-dark fs-7 ml-4 my-0">Phí bảo hiểm (Có VAT):<span class=" form-control form-dotted "  style="min-width:52%"></span>đồng</p>
+            </div>
+            <div class="pr-4 pl-2">
+                <h5 class="fw-bold fs-6 mb-1">3.<span class="ml-2">Thời hạn bảo hiểm</span></h5>
+                <p class="text-dark fs-7 ml-4 my-0">
+                  Từ<span class="form-control form-dotted min-w-15"></span> giờ, ngày <span class="form-control form-dotted min-w-15"></span>tháng <span class="form-control form-dotted min-w-15"></span>năm<span class="form-control form-dotted min-w-15"></span>
+                </p>
+                  <p class="text-dark fs-7 ml-4 mb-0">
+                    Đến<span class="form-control form-dotted min-w-15"></span> giờ, ngày <span class="form-control form-dotted min-w-15"></span>tháng <span class="form-control form-dotted min-w-15"></span>năm<span class="form-control form-dotted min-w-14"></span>
+  
+                </p>
+            </div>
+            <h5 class="fw-bold fs-6  pr-4 pl-2 mb-2">4.<span class="ml-2">Tổng phí tự nguyện (Co VAT):</span><span class="min-w-25 form-control form-dotted"></span>đồng</h5>
+            <div class="pr-4 pl-2">
+              <h5 class="fw-bold fs-6">5.<span class="ml-4">Người thụ hưởng:</span><span class=" float-right form-control form-dotted"></span></h5>
+              <p class="mb-0"><span class="form-control form-dotted min-w-100 my-0 mb-0"></span></p>
+              <p class="mb-0"><span class="form-control form-dotted min-w-100 my-0 mb-0"></span></p>
+              <p class="mb-0"><span class="form-control form-dotted min-w-100 my-0 mb-0"></span></p>
+            </div>
+        </div>
+      </div>
+      <!--luu y -->
+      <div class="border-1 border-darkest border-bottom col-12 my-2 pb-2">
+        <p class="text-black my-0 lh-sm ml-1 fs-8">Luu y:_ Giấy chứng nhận bảo hiểm này là bằng chứng ký kết Hợp đồng bảo hiểm giữa Bên mua bảo hiểm và BSH;</p>
+        <p class="text-black my-1 lh-sm ml-5 fs-8">_ Hợp đồng bảo hiểm bao gồm: Giấy yêu cầu bảo hiểm, Giấy chứng nhận bảo hiểm, Quy tắc bảo hiểm Tự nguyện xe cơ giới và các giấy tờ hợp lệ khác liên quan đến Hợp đồng bảo hiểm (nếu có);</p>
+        <p class="text-black my-0 lh-sm ml-5 fs-8">_ Quy tắc bảo hiểm Bắt buộc TNDS của chủ xe cơ giới được thực hiện theo đúng Quy định tại Nghị định 03/2021/NĐ-CP ngày 15/01/2021 của Chính phủ về bảo hiểm bắt buộc TNDS của chủ xe cơ giới và Thông tư 04/2021/TT-BTC ngày 15/01/2021 của Bộ Tài chính quy định chi tiết một số điều của Nghị định 03/2021/NĐ-CP và được đăng tải trên website: <a href="www.bshc.com.vn">www.bshc.com.vn</a> của BSH, cũng như các phương tiện thông tin truyền thông khác.</p>
+      </div>
+      <div class="col-12">
+        <div class="col-5 text-center">
+          <h1 class="fw-bold fs-6 text-uppercase col-12 ml-3">
+              TỔNG CÔNG TY CỔ PHẦN BẢO HIỂM Sài Gòn - Hà Nội
+          </h1>
+        
+          <div class="">
+              <p class="mr-auto ml-auto fw-bold text-black fs-3 border border-1 border-secondary w-40 py-1 px-1 text-wrap mt-8">Mã QR Codes</p>
+              <p class="mr-auto rounded ml-auto text-black border border-1 border-secondary w-70 pt-1 pb-1 fs-6">Chữ ký điện tử</p>
+          </div>
+        </div>
+        <div class="col-7 mt-5">
+          <div class="border border-3 border-primary col-11 ml-6 py-1 px-1 mt-7" style="border-radius:20px">
+            <h4 class="mt-2 text-center fw-bold fs-5 text-orange">NƠI CẤP GIẤY CHỨNG NHẬN</h4>
+            <p class=" ml-3 mb-0 mr-3">Công ty Bảo hiểm BSH<span class=" form-control form-dotted" style="min-width:62%"></span></p>
+            <p class=" ml-3 mb-0 mr-3">Địa chỉ: <span class=" form-control form-dotted" style="min-width:84%"></span></p>
+            <p class=" ml-3 mb-3 mr-3">Điện thoại<span class=" form-control form-dotted" style="min-width:81%"></span></p>
+          </div>
+        </div>
+        <br>
+        <div class="col-12 my-0 text-center">
+          <p class=" border border-dotted text-black my-2 w-90 mr-auto ml-auto py-1 mb-4 mt-1">Link tra cứu GCN</p>
+        </div>
+      </div>
+    </main>
+  </div>
+    
+</body>
+</html>
